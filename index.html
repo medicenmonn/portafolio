@@ -11,43 +11,77 @@
     />
   </head>
   <body>
-    <div class="header-img"></div>
-    <div class="header">Monserrat Salgado</div>
-    <div>Front End Developer</div>
-    <div class="navigation">
-      <div>Sobre mí</div>
-      <div>Mis Proyectos</div>
-      <div>Contacto</div>
-    </div>
+      <header>
+        <img src="./images/aji.png" alt="Monserrat Salgado" class="header-img"></img>
+        <h1 class="header">Monserrat Salgado</h1>
+        <h2>Front End Developer</h2>
+        <nav class="navigation">
+            <ul>
+                <li class="nav-item"><a href="./"></a>Sobre mi</li>
+                <li class="nav-item"><a href="./"></a>Mis Proyectos</li>
+                <li class="nav-item"><a href="./"></a>Contacto</li>
+            </ul>
+        </nav>
+      </header>
 
-    Hola! Soy Monserrat 👋 Soy Mexicana, y como una buena amo los tacos.  También crear
-    cosas lindas para la web y el diseño de experiecia de usuario 😍 Aqui puedes ver algunos de mis proyectos
-    recientes y tambien puedes contactarme por si quieres hablar o crear algo juntos!
+    <main>
 
-    <div class="carousel">
-      <div class="arrow arrow-left"></div>
-      <div class="window">
-        <div class="project-container">
-          <div class="project project1"></div>
-          <div class="project project2"></div>
-          <div class="project project3"></div>
-          <div class="project project4"></div>
-          <div class="project project5"></div>
+        <section>
+            <h2 class="header">Acerca de</h2>
+            <p class="intro">
+               Hola! Soy Monserrat 👋 Soy Mexicana, y como una buena amo los tacos.  También crear
+               cosas lindas para la web y el diseño de experiecia de usuario 😍 Aqui puedes ver algunos de mis proyectos
+               recientes y tambien puedes contactarme por si quieres hablar  o crear algo juntos!
+           </p>
+
+       <ul>
+           <li>
+               <a href="linkdetw" target="_blank">
+                   <img src="logo" alt="Twitter" />
+               </a>
+           </li>
+           <li>
+               <a href="linkdegithub" target="_blank">
+                   <img src="logo" alt="GitHub" />
+               </a>
+           </li>
+           <li>
+               <a href="linkdeig" target="_blank">
+                   <img src="logo" alt="Instagram" />
+               </a>
+           </li>
+       </ul>
+    </section>
+    <section>
+        <h2 class="header">Mis proyectos</h2>
+        <div class="carousel">
+          <div class="arrow arrow-left"></div>
+          <div class="window">
+            <ul class="project-container">
+              <li><button><img src="./images/project1.png" class="project project1" alt="Proyecto a"/></button></li>
+              <li><button><img src="./images/project2.png" class="project project2" alt="Proyecto x"/></button></li>
+              <li><button><img src="./images/project3.png" class="project project3"alt="Proyecto y"/></button></li>
+              <li><button><img src="./images/project4.png" class="project project4"alt="proyecto z"/></button></li>
+              <li><button><img src="./images/project5.png" class="project project5" alt="proyecto b"/></button></li>
+            </ul>
+          </div>
+          <div class="arrow arrow-right"></div>
         </div>
-      </div>
-      <div class="arrow arrow-right"></div>
-    </div>
+    </section>
+    </main>
 
-    <div class="header">Contacto</div>
-    <div class="form-container">
-      Nombre<input type="text" /> <br />
-      Correo<input type="text" /> <br />
-      Mensaje<input type="text" /> <br />
-    </div>
-    <div class="send-button">Enviar</div>
-
-    <div class="notification">Esto es una notificacion</div>
-    <div class="modal-container"><div class="modal">Esto es un modal</div></div>
+    <footer>
+        <h2 class="header">Contacto</h2>
+        <form class="form-container">
+          Nombre<input type="text" /> <br />
+          Correo<input type="text" /> <br />
+          Mensaje<input type="text" /> <br />
+        </form>
+        <button class="send-button">Enviar</button>
+    
+        <div class="notification">Esto es una notificacion</div>
+        <div class="modal-container"><div class="modal">Esto es un modal</div>
+    </footer>
 
     <script src="index.js" type="text/javascript"></script>
   </body>

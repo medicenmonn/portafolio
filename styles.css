@@ -1,7 +1,7 @@
 /* css reset */
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 62.5%;
   }
   
   *,
@@ -35,31 +35,48 @@ html {
     height: auto;
   }
   
-  body {
+  body, header, section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   
   .header {
-    margin-top: 24px;
-    font-size: 32px;
+    margin-top: 2.4rem;
+    font-size: 3.2rem;
     font-weight: bold;
   }
   
   .header-img {
-    background: center / contain no-repeat url(./images/aji.png);
     height: 250px;
     width: 250px;
     border-radius: 50%;
   }
-  
+
+  .nav {
+    width: 100%;
+    display: flex;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+  .nav-item {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+
+  }
   .navigation {
     display: flex;
     width: 50%;
     justify-content: space-around;
-    margin: 16px 0;
-    color: blue;
+    margin: 24px auto;
+    color: pink;
     cursor: pointer;
   }
   
@@ -89,23 +106,23 @@ html {
   }
   
   .project1 {
-    background: center / contain no-repeat url(./images/project1.png);
+    background: center / contain no-repeat ;
   }
   
   .project2 {
-    background: center / contain no-repeat url(./images/project2.png);
+    background: center / contain no-repeat ;
   }
   
   .project3 {
-    background: center / contain no-repeat url(./images/project3.png);
+    background: center / contain no-repeat ;
   }
   
   .project4 {
-    background: center / contain no-repeat url(./images/project4.png);
+    background: center / contain no-repeat ;
   }
   
   .project5 {
-    background: center / contain no-repeat url(./images/project5.png);
+    background: center / contain no-repeat ;
   }
   
   .arrow {
