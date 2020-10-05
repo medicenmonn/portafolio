@@ -10,11 +10,13 @@
       rel="stylesheet"
     />
   </head>
+  <!-- skip link   --> <a href="main" class="skip-link">Saltar al contenido</a>
+   
   <body>
       <header>
         <img src="./images/aji.png" alt="Monserrat Salgado" class="header-img"></img>
         <h1 class="header">Monserrat Salgado</h1>
-        <h2>Front End Developer</h2>
+        <h2 class="subtitle">Front End Developer</h2>
         <nav class="navigation">
             <ul>
                 <li class="nav-item"><a href="acerca de"></a>Acerca de</li>
@@ -34,20 +36,23 @@
                recientes y tambien puedes contactarme por si quieres hablar  o crear algo juntos!
            </p>
 
-       <ul>
+       <ul class="social-media">
            <li>
                <a href="linkdetw" target="_blank">
                    <img src="logo" alt="Twitter" />
+                   <p class="social-media-link-text">Twitter</p>
                </a>
            </li>
            <li>
                <a href="linkdegithub" target="_blank">
                    <img src="logo" alt="GitHub" />
+                   <p class="social-media-link-text">GitHub</p>
                </a>
            </li>
            <li>
                <a href="linkdeig" target="_blank">
                    <img src="logo" alt="Instagram" />
+                   <p class="social-media-link-text">Instagram</p>
                </a>
            </li>
        </ul>
@@ -55,7 +60,7 @@
     <section>
         <h2 class="header">Mis proyectos</h2>
         <div class="carousel">
-          <div class="arrow arrow-left" aria-label="backward button"></div>
+          <button class="arrow arrow-left" aria-label="backward button"></button>
           <div class="window">
             <ul class="project-container">
               <li><button><img src="./images/project1.png" class="project project1" alt="Proyecto a" /></button></li>
@@ -65,7 +70,7 @@
               <li aria-hidden="true"><button><img src="./images/project5.png" class="project project5" alt="proyecto b" /></button></li>
             </ul>
           </div>
-          <div class="arrow arrow-right" aria-label="forwad button"></div>
+          <button class="arrow arrow-right" aria-label="forwad button"></button>
         </div>
     </section>
     </main>
@@ -73,9 +78,9 @@
     <footer>
         <h2 class="header">Contacto</h2>
         <form class="form-container">
-          Nombre<input type="text" aria-label="nombre" /> <br />
-          Correo<input type="text" aria-label="correo" /> <br />
-          Mensaje<input type="text" aria-label="mensaje" /> <br />
+          <p class="form-label">Nombre</p><input type="text" aria-label="nombre" /> <br />
+          <p class="form-label">Correo</p><input type="text" aria-label="correo" /> <br />
+          <p class="form-label">Mensaje </p><input type="text" aria-label="mensaje" /> <br />
         </form>
         <button class="send-button">Enviar</button>
     

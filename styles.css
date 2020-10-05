@@ -1,4 +1,9 @@
 /* css reset */
+:root {
+  --primary-color: #201a1c;
+  --first: #f5eee9;
+  --second: #c88770;
+}
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -34,18 +39,40 @@ html {
     max-width: 100%;
     height: auto;
   }
-  
+  body {
+    background-color: var(--primary-color);
+  }
   body, header, section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+
+  .skip-link {
+    height: 0;
+  }
+
+  .skip-link:focus, .skip-link:active {
+    background: var(--first);
+    border-radius: 5px;
+    color: var(--first);
+    font-family: 'Courier New', Courier, monospace;
+    height: auto;
+    margin: 16px 0 8px;
+    padding: 8px;
+    text-decoration: none;
+  }
   
   .header {
     margin-top: 2.4rem;
     font-size: 3.2rem;
     font-weight: bold;
+    color: var(--second);
+  }
+
+  .subtitle {
+    color: var(--first);
   }
   
   .header-img {
@@ -61,7 +88,7 @@ html {
 
   .nav-item a {
     text-decoration: none;
-    color: black;
+    color: var(--first);
 
   }
 
@@ -69,25 +96,81 @@ html {
     align-items: center;
     border-radius: 5px;
     display: flex;
+  }
 
+  .nav-item:hover, 
+  .nav-item:hover a {
+    background-color: var(--first);
+    color: black;
+    cursor: pointer;
+  }
+
+  .nav-item:focus-within {
+    background-color: green;
+  }
+
+  .nav-item a:focus {
+    outline: none;
+    color: gray;
   }
   .navigation {
     display: flex;
     width: 50%;
     justify-content: space-around;
     margin: 24px auto;
-    color: pink;
+    color: var(--first);
     cursor: pointer;
+  }
+
+  .intro {
+    margin: 24px 196px 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--first);
+    font-size: 1.6rem;
+  }
+
+  .social-media {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 32px auto 0;
+    width: 20%;
+  }
+
+  .social-media li a {
+    align-items: center;
+    display: flex;
+    color: var(--second);
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .social-media li a:focus {
+    outline: none;
+  }
+
+  .social-media li:focus-within {
+    outline: 3px solid var(--second);
+    padding: 8px;
+  }
+
+  .social-link-text {
+    padding-right:8px;
+    padding-left: 8px;
   }
   
   .carousel {
     display: flex;
     align-items: center;
+    margin: 48px 0 64px;
   }
   
   .window {
-    width: 500px;
+    width: 815px;
     overflow: hidden;
+    padding: 8px;
+
   }
   
   .project-container {
@@ -98,10 +181,25 @@ html {
     left: 1;
   }
   
+  .proyect-container li {
+    display: inline-block;
+  }
+
+  .proyect-container button {
+    background:none;
+    border: none;
+    padding: 0;
+  }
+
+  .proyect-container button:focus-within {
+    outline: 3px solid var(--second);
+
+  }
+  
   .project {
     height: 150px;
     width: 150px;
-    border: 2px solid #000;
+    border: 2px solid var(--first);
     margin: 0 8px;
   }
   
@@ -129,13 +227,44 @@ html {
     height: 75px;
     width: 75px;
   }
+
+  .arrow:hover {
+    transform: scale(1.1);
+  }
   
   .arrow-left {
     background: center / contain no-repeat url(./images/arrow-left.png);
+    background-color: var(--second);
+    border-radius: 50%;
   }
   
   .arrow-right {
     background: center / contain no-repeat url(./images/right-arrow.png);
+    background-color: var(--second);
+    border-radius: 50%;
+  }
+
+  .arrow:focus {
+    outline: 3px solid var(--first)
+  }
+
+ .contact-section {
+   align-items: center;
+   background-color: var(--first);
+   display: flex;
+   flex-direction: column;
+ }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .form-label,
+  .message-input {
+    color: var(--second);
+    font-family: 'Courier New', Courier, monospace;
   }
   
   .form-container {
@@ -146,19 +275,27 @@ html {
   
   input {
     width: 100%;
-    outline: none;
+  }
+
+  input:focus {
+    outline: 3px solid var(--first);
+    padding: 8px;
   }
   
   .send-button {
     height: 50px;
     width: 100px;
-    background-color: grey;
-    color: white;
+    background-color: var(--second);
+    color: var(--first);
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 48px;
+    margin-left: auto;
   }
+
   
   .notification {
     width: 300px;
