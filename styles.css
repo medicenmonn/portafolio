@@ -1,9 +1,5 @@
 /* css reset */
-:root {
-  --primary-color: #201a1c;
-  --first: #f5eee9;
-  --second: #c88770;
-}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -39,14 +35,21 @@ html {
     max-width: 100%;
     height: auto;
   }
-  body {
-    background-color: var(--primary-color);
+
+  :root {
+    --primary-color: #201a1c;
+    --first: #f5eee9;
+    --second: #c88770;
+    --button: #dac6b4;
+    --secondary-font: sans-serif;
   }
+
   body, header, section {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: var(--primary-color)
   }
 
   .skip-link {
@@ -56,12 +59,14 @@ html {
   .skip-link:focus, .skip-link:active {
     background: var(--first);
     border-radius: 5px;
-    color: var(--first);
-    font-family: 'Courier New', Courier, monospace;
+    color: var(--second);
+    font-family: var(--secondary-font);
     height: auto;
     margin: 16px 0 8px;
     padding: 8px;
     text-decoration: none;
+    border: 5px solid var(--button);
+    outline: 3px solid var(--second);
   }
   
   .header {
@@ -73,17 +78,29 @@ html {
 
   .subtitle {
     color: var(--first);
+    font-size: 2.4 rem;
   }
   
   .header-img {
-    height: 250px;
-    width: 250px;
     border-radius: 50%;
+    border: 1px solid var(--button);
+    box-shadow: 8px 16px 32px 0px var(--shadow);
+    height: 300px;
+    margin-top: 80px;
+    width: 300px;
   }
 
-  .nav {
+  nav {
     width: 100%;
+  }
+
+  .navigation {
     display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin: 24px auto;
+    color: var(--first);
+    cursor: pointer;
   }
 
   .nav-item a {
@@ -95,36 +112,35 @@ html {
   .nav-item {
     align-items: center;
     border-radius: 5px;
-    display: flex;
+    display: inline-block;
+    font-family: var(--secondary-font);
+    height: 30px;
+    justify-content: center;
+    width: auto;
+    margin: 33px;
+    font-size: 1.6rem;
   }
 
   .nav-item:hover, 
   .nav-item:hover a {
-    background-color: var(--first);
-    color: black;
+    background-color: var(--second);
+    color: var(--first);
     cursor: pointer;
+    width: auto;
   }
 
   .nav-item:focus-within {
-    background-color: green;
+    background-color: var(--second);
   }
 
   .nav-item a:focus {
     outline: none;
-    color: gray;
-  }
-  .navigation {
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-    margin: 24px auto;
-    color: var(--first);
-    cursor: pointer;
+    color: var(--second)
   }
 
   .intro {
     margin: 24px 196px 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--secondary-font);
     color: var(--first);
     font-size: 1.6rem;
   }
@@ -134,14 +150,13 @@ html {
     display: flex;
     justify-content: space-around;
     margin: 32px auto 0;
-    width: 20%;
   }
 
   .social-media li a {
     align-items: center;
     display: flex;
     color: var(--second);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--secondary-font);
     text-decoration: none;
     font-size: 1.3rem;
   }
@@ -159,6 +174,13 @@ html {
     padding-right:8px;
     padding-left: 8px;
   }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    color: var(--second);
+    margin: 8px;
+  }
   
   .carousel {
     display: flex;
@@ -170,62 +192,55 @@ html {
     width: 815px;
     overflow: hidden;
     padding: 8px;
-
   }
   
   .project-container {
     display: flex;
     align-items: center;
-    width: 850px;
+    width: 1500px;
     position: relative;
-    left: 1;
+    left: 0;
   }
   
-  .proyect-container li {
+  .project-container li {
     display: inline-block;
   }
 
-  .proyect-container button {
+  .project-container button {
     background:none;
     border: none;
     padding: 0;
   }
 
-  .proyect-container button:focus-within {
+  .project-container button:focus-within {
     outline: 3px solid var(--second);
 
   }
   
   .project {
-    height: 150px;
+    border-radius: 5px;
+    display: inline-block;
+    height: 400px;
     width: 150px;
     border: 2px solid var(--first);
     margin: 0 8px;
+    transition: all 0.2s ease-in-out;
+    object-fit: cover;
   }
+   .project:hover {
+    cursor: poiter;
+    transform: scale(1,1);
+   }
   
-  .project1 {
-    background: center / contain no-repeat ;
-  }
-  
-  .project2 {
-    background: center / contain no-repeat ;
-  }
-  
-  .project3 {
-    background: center / contain no-repeat ;
-  }
-  
-  .project4 {
-    background: center / contain no-repeat ;
-  }
-  
-  .project5 {
+  .project1,
+  .project2, .project3, .project4, .project5 {
     background: center / contain no-repeat ;
   }
   
   .arrow {
     height: 75px;
     width: 75px;
+    transition: all 0.2s ease-in-out
   }
 
   .arrow:hover {
@@ -248,11 +263,16 @@ html {
     outline: 3px solid var(--first)
   }
 
+  footer {
+    width: 30%;
+  }
+
  .contact-section {
    align-items: center;
-   background-color: var(--first);
+   background-color: var(--second);
    display: flex;
    flex-direction: column;
+   width: 100%;
  }
 
   .form-container {
@@ -265,10 +285,17 @@ html {
   .message-input {
     color: var(--second);
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    margin: 5px;
+  }
+
+  .message-input input {
+    height: 150px;
+    margin-bottom: 16px;
   }
   
   .form-container {
-    width: 30%;
+    width: auto;
     display: flex;
     flex-direction: column;
   }
@@ -278,13 +305,13 @@ html {
   }
 
   input:focus {
-    outline: 3px solid var(--first);
+    outline: 3px solid var(--second);
     padding: 8px;
   }
   
   .send-button {
     height: 50px;
-    width: 100px;
+    width: 150px;
     background-color: var(--second);
     color: var(--first);
     border-radius: 5px;
@@ -294,6 +321,7 @@ html {
     font-size: 1.6rem;
     margin-bottom: 48px;
     margin-left: auto;
+    font-family: var(--secondary-font);
   }
 
   
@@ -303,10 +331,10 @@ html {
     position: absolute;
     right: 24px;
     top: 24px;
-    border: 2px solid #000;
+    border: 2px solid var(--button);
     border-radius: 5px;
-    background-color: grey;
-    color: white; 
+    background-color: var(--second);
+    color: var(--first); 
     display: none;
     align-items: center;
     justify-content: center;
@@ -323,17 +351,26 @@ html {
   }
   
   .modal {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 25%;
-    border: 2px solid #000;
+    width: 700px;
+    height: 700px;
+    position: fixed;
+    top: 15%;
+    border: 2px solid var(--button);
     border-radius: 5px;
-    background-color: grey;
-    color: white; 
+    background-color: var(--first);
+    color: var(--second); 
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .modal-project-image {
+    background: center / cover no-repeart url(project1);
+    border-radius: 5px;
+    border: 2px solid #000;
+    height: 400px;
+    margin: 16px;
+    width: 550px;
   }
   
   .show {
