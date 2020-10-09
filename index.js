@@ -58,7 +58,7 @@ window.onload = () => {
         document.querySelector('.project2').removeAttribute("tabindex");
         document.querySelector('.project2-container').removeAttribute("aria-hidden");
         break;
-      case 0:
+      case -540:
         document.querySelector('.project4').setAttribute("tabindex", "-1");
         document.querySelector('.project4-container').setAttribute("aria-hidden", "true");
         document.querySelector('.project1').removeAttribute("tabindex");
